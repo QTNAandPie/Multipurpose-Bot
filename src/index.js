@@ -7,7 +7,7 @@ const path = require('path');
 
 const client = new Client({
     intents: [        
-        GatewayIntentBits.Guilds,       
+        GatewayIntentBits.Guilds,  
         GatewayIntentBits.GuildMembers, 
         GatewayIntentBits.GuildMessages,
         GatewayIntentBits.GuildPresences,      
