@@ -50,9 +50,8 @@ module.exports = {
 
         let currentRank = allLevel.findIndex((lvl) => lvl.userId === targetUserId) + 1;
 
-        const background = 'https://cdn.discordapp.com/attachments/1147339491187626076/1147356543210229870/Canvas_Gradient.png';
         const rank = new canvacord.Rank()
-            .setBackground('IMAGE', background)
+            .setBackground('COLOR', "#99ffff")
             .setAvatar(targetUserObj.user.displayAvatarURL({ size: 256 }))
             .setRank(currentRank)
             .setLevel(fetchedLevel.level)

@@ -2,10 +2,12 @@ require('dotenv/config');
 
 const { Client, GatewayIntentBits } = require('discord.js');
 const { CommandKit } = require('commandkit');
+const keepAlive = require('../src/server')
 const mongoose = require('mongoose')
 const path = require('path');
 
 const client = new Client({
+    disableEveryone: true,
     intents: [        
         GatewayIntentBits.Guilds,  
         GatewayIntentBits.GuildMembers, 
@@ -31,4 +33,5 @@ new CommandKit({
     }
 })();
 
+keepAlive()
 client.login(process.env.TOKEN);
